@@ -1,0 +1,19 @@
+{
+  "name": "createapp",
+  "version": "1.0.0",
+  "description": "CLI for creating basic files (html, js, css)",
+  "main": "bin/createapp.js",
+  "bin": {
+    "createapp": "createapp.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "2.4.2",
+    "log-symbols": "2.2.0"
+  }
+}
