@@ -79,14 +79,14 @@ fs.access('./style.css', (err) => {
  * helping functions *
  *********************/
 function logCreatedSuccessfuly(filename) {
-    console.log(chalk.bold.bgGreen.white(logSymbols.success + ' ' + filename + ' created'));
+    console.log('  ' + chalk.bold.green(logSymbols.success + ' ' + filename + ' created'));
 }
 
 function logFailedToCreate(filename) {
-    console.log(chalk.bold.bgWhite.red(logSymbols.error + ' failed to create a file ' + filename + ', this file already exists'));
+    console.log('  ' + chalk.bold.bgYellow.red(logSymbols.error + ' failed to create a file ' + filename + ', this file already exists'));
 }
 
 function logFolderNotEmpty() {
-    console.log(chalk.bold.bgMagenta.yellow(logSymbols.warning + ' WARN: folder is not empty'));
+    console.log('  ' + chalk.bold.bgMagenta.yellow(logSymbols.warning + ' WARN: folder is not empty'));
 }
 
