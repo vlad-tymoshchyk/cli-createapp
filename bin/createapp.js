@@ -20,18 +20,19 @@ fs.access('./index.html', (err) => {
   if (!err) {
     logFailedToCreate('index.html')
   } else {
+    let title = process.argv[2] || 'Hello world';
     let html = 
       '<!DOCTYPE html>\n'
     + '<html lang="en">\n'
     + '  <head>\n'
     + '    <meta charset="UTF-8">\n'
-    + '    <title></title>\n'
+    + '    <title>' + title + '</title>\n'
     + '    <link rel="stylesheet" href="style.css"/>\n'
+    + '    <script src="script.js" type="text/javascript"></script>\n'
     + '  </head>\n'
     + '  <body>\n'
-    + '    <h1>Hello world</h1>\n'
+    + '    <h1>' + title + '</h1>\n'
     + '    <hr>\n'
-    + '    <script src="script.js" type="text/javascript"></script>\n'
     + '  </body>\n'
     + '</html>'
     fs.writeFile('index.html', html, (err) => {
